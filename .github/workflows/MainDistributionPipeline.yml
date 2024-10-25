@@ -19,7 +19,7 @@ jobs:
       duckdb_version: v1.1.2
       ci_tools_version: v1.1.2
       extension_name: uc_catalog
-      exclude_archs: 'wasm_mvp;wasm_eh;wasm_threads;windows_amd64_rtools;windows_amd64;linux_arm64;'
+      exclude_archs: 'wasm_mvp;wasm_threads;windows_amd64_rtools;windows_amd64;linux_arm64;'
 
   duckdb-stable-deploy:
     name: Deploy extension binaries
