@@ -4,7 +4,7 @@
 duckdb_extension_load(uc_catalog
     SOURCE_DIR ${CMAKE_CURRENT_LIST_DIR}
     LOAD_TESTS
-    LINKED_LIBS "../../**/*.a"
+    LINKED_LIBS "../../vcpkg_installed/wasm32-emscripten/debug/lib/libcrypto.a;vcpkg_installed/wasm32-emscripten/debug/lib/libz.a"
 )
 
 # TODO enable this to test with delta
