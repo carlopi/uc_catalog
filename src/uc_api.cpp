@@ -14,7 +14,7 @@ static string GetRequest(const string &url, const string &token = "") {
 	CURL *curl;
 	CURLcode res;
 	string readBuffer;
-
+/*
 	curl = curl_easy_init();
 	if (curl) {
 		curl_easy_setopt(curl, CURLOPT_URL, url.c_str());
@@ -33,6 +33,7 @@ static string GetRequest(const string &url, const string &token = "") {
 		}
 		return readBuffer;
 	}
+*/
 	throw InternalException("Failed to initialize curl");
 }
 
@@ -71,7 +72,7 @@ static string GetCredentialsRequest(const string &url, const string &table_id, c
 
 	string body = StringUtil::Format(R"({"table_id" : "%s", "operation" : "READ"})", table_id);
 
-	curl = curl_easy_init();
+/*	curl = curl_easy_init();
 	if (curl) {
 		curl_easy_setopt(curl, CURLOPT_URL, url.c_str());
 		curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, GetRequestWriteCallback);
@@ -100,6 +101,7 @@ static string GetCredentialsRequest(const string &url, const string &table_id, c
 		}
 		return readBuffer;
 	}
+*/
 	throw InternalException("Failed to initialize curl");
 }
 
