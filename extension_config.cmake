@@ -4,6 +4,7 @@
 duckdb_extension_load(uc_catalog
     SOURCE_DIR ${CMAKE_CURRENT_LIST_DIR}
     LOAD_TESTS
+    LINKED_LIBS "../../deps/local/lib/*.a"
 )
 
 # TODO enable this to test with delta
